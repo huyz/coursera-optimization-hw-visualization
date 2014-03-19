@@ -5,6 +5,15 @@ Coursera course: [Discrete Optimization (session 2, March 2014)](https://class.c
 
 This is to visualize and get a sense of the assignment's data sets.
 
+Usage:
+
+1. Run RStudio
+1. Load up `README.Rmd`
+1. Modify `processData` function below to set the working directory to be the root of your assignment (where the `data/` directory can be found)
+1. Click "Knit HTML" (or hit Shift-Command-H on Mac)
+
+---
+
 
 ```r
 if (!require("igraph")) {
@@ -19,8 +28,8 @@ if (!require("igraph")) {
 
 
 
-processData()
--------------
+Helpers
+-------
 
 
 ```r
