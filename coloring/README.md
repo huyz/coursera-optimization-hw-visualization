@@ -46,11 +46,13 @@ processData = function(dataFile, display = T) {
     # ID.)
     G = graph.data.frame(Table, directed = F)
     
+    hist(degree(G), col = "lightgreen")
+    
     if (display) {
         plot(G)
+        plot(G, layout = layout.circle, vertex.size = 10 + 5 * log(degree(G)))
     }
     
-    hist(degree(G), col = "lightgreen")
 }
 ```
 
@@ -64,72 +66,72 @@ gc_20_1
 processData("data/gc_4_1")
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-31.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-32.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-31.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-32.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-33.png) 
 
 ```r
 processData("data/gc_20_1")
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-33.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-34.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-34.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-35.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-36.png) 
 
 ```r
 processData("data/gc_20_3")
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-35.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-36.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-37.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-38.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-39.png) 
 
 ```r
 processData("data/gc_20_5")
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-37.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-38.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-310.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-311.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-312.png) 
 
 ```r
 processData("data/gc_20_7")
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-39.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-310.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-313.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-314.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-315.png) 
 
 ```r
 processData("data/gc_20_9")
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-311.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-312.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-316.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-317.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-318.png) 
 
 ```r
 processData("data/gc_50_3")
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-313.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-314.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-319.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-320.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-321.png) 
 
 ```r
 processData("data/gc_70_7", F)
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-315.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-322.png) 
 
 ```r
 processData("data/gc_100_5", F)
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-316.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-323.png) 
 
 ```r
 processData("data/gc_250_9", F)
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-317.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-324.png) 
 
 ```r
 processData("data/gc_500_1", F)
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-318.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-325.png) 
 
 ```r
 processData("data/gc_1000_5", F)
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-319.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-326.png) 
 
 
