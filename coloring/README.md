@@ -50,7 +50,7 @@ processData = function(dataFile, display = T) {
         plot(G)
     }
     
-    hist(degree(G))
+    hist(degree(G), col = "lightgreen")
 }
 ```
 
