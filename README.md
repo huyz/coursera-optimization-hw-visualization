@@ -7,6 +7,7 @@ Coursera course: [Discrete Optimization (session 2, March
 This is to visualize and get a sense of the assignment's data sets.
 
 
-Assignments:
+Assignments
+-----------
 
 - [graph coloring](coloring/)
