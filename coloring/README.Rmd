@@ -1,0 +1,54 @@
+Coursera Discrete Optimization HW - Graph Coloring
+==================================================
+
+Coursera course: [Discrete Optimization (session 2, March 2014)](https://class.coursera.org/optimization-002)
+
+This is to visualize and get a sense of the assignment's data sets.
+
+```{r}
+if (!require("igraph")) {
+  install.packages("igraph", repos="http://cran.rstudio.com/") 
+  library("igraph")
+}
+```
+
+
+processData()
+-------------
+
+```{r  fig.width=7, fig.height=6}
+
+processData = function(dataFile, display=T) {
+  setwd('~/cabinet/Personal/Education/2014 Coursera Discrete Optimization/hw/src/coloring')
+  Table = read.table(dataFile, header=T)
+
+  # (Note: if we had read in the data from file directly via `read.graph`, not only would we not have been able to skip the header line but igraph would have changed the node indexes to 1-based indexing by adding 1 to every ID.)
+  G = graph.data.frame(Table, directed=F)
+
+  if (display) {
+    plot(G)
+  }
+
+  hist(degree(G))
+}
+```
+
+
+gc_20_1
+-------
+
+```{r}
+processData("data/gc_4_1")
+processData("data/gc_20_1")
+processData("data/gc_20_5")
+processData("data/gc_20_9")
+processData("data/gc_50_1")
+processData("data/gc_50_9")
+processData("data/gc_70_9", F)
+processData("data/gc_100_7", F)
+processData("data/gc_250_5", F)
+processData("data/gc_500_3", F)
+processData("data/gc_1000_1", F)
+
+```
+
