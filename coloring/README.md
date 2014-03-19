@@ -1,7 +1,7 @@
 Coursera Discrete Optimization HW - Graph Coloring
 ==================================================
 
-Coursera course: [Discrete Optimization (session 2, March 2014)](https://class.coursera.org/optimization-002)
+Coursera course: [Discrete Optimization](https://www.coursera.org/course/optimization) ([session 2](https://class.coursera.org/optimization-002), March 2014)
 
 This is to visualize and get a sense of the assignment's data sets.
 
@@ -11,8 +11,8 @@ Usage
 1. Run RStudio
 1. Load up `README.Rmd`
 1. Modify `processData` function below to set the working directory to be the root of your assignment (where the `data/` directory can be found)
-1. Click "Knit HTML" (or hit Shift-Command-H on Mac)
-1. Everything below will be regenerated
+1. Click "Knit HTML" (or hit Ctrl-Shift-H)
+1. All the figures below will be regenerated
 
 ---
 
@@ -73,57 +73,63 @@ processData("data/gc_20_1")
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-33.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-34.png) 
 
 ```r
-processData("data/gc_20_5")
+processData("data/gc_20_3")
 ```
 
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-35.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-36.png) 
 
 ```r
-processData("data/gc_20_9")
+processData("data/gc_20_5")
 ```
 
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-37.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-38.png) 
 
 ```r
-processData("data/gc_50_1")
+processData("data/gc_20_7")
 ```
 
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-39.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-310.png) 
 
 ```r
-processData("data/gc_50_9")
+processData("data/gc_20_9")
 ```
 
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-311.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-312.png) 
 
 ```r
-processData("data/gc_70_9", F)
+processData("data/gc_50_3")
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-313.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-313.png) ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-314.png) 
 
 ```r
-processData("data/gc_100_7", F)
-```
-
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-314.png) 
-
-```r
-processData("data/gc_250_5", F)
+processData("data/gc_70_7", F)
 ```
 
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-315.png) 
 
 ```r
-processData("data/gc_500_3", F)
+processData("data/gc_100_5", F)
 ```
 
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-316.png) 
 
 ```r
-processData("data/gc_1000_1", F)
+processData("data/gc_250_9", F)
 ```
 
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-317.png) 
+
+```r
+processData("data/gc_500_1", F)
+```
+
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-318.png) 
+
+```r
+processData("data/gc_1000_5", F)
+```
+
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-319.png) 
 
 
