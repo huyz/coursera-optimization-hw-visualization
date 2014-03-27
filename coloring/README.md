@@ -46,7 +46,11 @@ processData = function(dataFile, display = T) {
     # ID.)
     G = graph.data.frame(Table, directed = F)
     
-    hist(degree(G), col = "lightgreen")
+    # hist(degree(G), col='lightgreen')
+    
+    degreeTable = table(degree(G))
+    lineWidth = 300/length(degreeTable)
+    plot(degreeTable, type = "h", col = "lightgreen", lwd = lineWidth)
     
     if (display) {
         plot(G)
@@ -58,8 +62,8 @@ processData = function(dataFile, display = T) {
 
 
 
-gc_20_1
--------
+Datasets
+--------
 
 
 ```r

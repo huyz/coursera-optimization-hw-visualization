@@ -36,7 +36,11 @@ processData = function(dataFile, display=T) {
   # (Note: if we had read in the data from file directly via `read.graph`, not only would we not have been able to skip the header line but igraph would have changed the node indexes to 1-based indexing by adding 1 to every ID.)
   G = graph.data.frame(Table, directed=F)
 
-  hist(degree(G), col="lightgreen")
+  #hist(degree(G), col="lightgreen")
+  
+  degreeTable = table(degree(G))
+  lineWidth = 300 / length(degreeTable)
+  plot(degreeTable, type="h", col="lightgreen", lwd=lineWidth)
 
   if (display) {
     plot(G)
@@ -47,8 +51,8 @@ processData = function(dataFile, display=T) {
 ```
 
 
-gc_20_1
--------
+Datasets
+--------
 
 ```{r}
 processData("data/gc_4_1")
