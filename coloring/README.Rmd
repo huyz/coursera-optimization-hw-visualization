@@ -14,9 +14,20 @@ Usage
 1. Click "Knit HTML" (or hit Ctrl-Shift-H)
 1. All the figures below will be regenerated
 
+When you have a solution and you want to color the graph's vertices accordingly:
+
+1. Change `colorSolution` below to `T`
+1. Save your output file with the same name as the data file plus the '.output' extension; e.g., data/gc_20_1.output
+1. Re-run "Knit HTML"
+
 ---
 
 ```{r}
+
+# If colorSolution is set to T, and output file is available with the same name as the data file
+# plus the '.output' extension (e.g., data/gc_20_1.output), then this R script will color the graph with your solution.
+colorSolution = F
+
 if (!require("igraph")) {
   install.packages("igraph", repos="http://cran.rstudio.com/") 
   library("igraph")
@@ -40,8 +51,26 @@ processData = function(dataFile, display=T) {
   
   degreeTable = table(degree(G))
   lineWidth = 300 / length(degreeTable)
-  plot(degreeTable, type="h", col="lightgreen", lwd=lineWidth)
+  plot(degreeTable, type="h", xlab="degree", ylab="frequency", col="lightgreen", lwd=lineWidth)
 
+  # Visualize a solution's output, if any
+  outputFile = paste(dataFile, '.output', sep='')
+  if (colorSolution & file.exists(outputFile)) {
+    Nodes = scan(outputFile, skip = T)
+    # Add 2 because we don't want the black color (1)
+    Nodes = Nodes + 2
+    
+    # Re-order colors because igraph doesn't have the vertices in the right order
+    Colors = vector()
+    vertices = V(G)
+    for (i in 1:length(vertices)) {
+      Colors[i] = Nodes[as.numeric(vertices[i]$name) + 1]
+    }
+    
+    # Store colors in graph for plotting
+    V(G)$color = Colors
+  }
+  
   if (display) {
     plot(G)
     plot(G, layout=layout.circle, vertex.size=10+5*log(degree(G)))
